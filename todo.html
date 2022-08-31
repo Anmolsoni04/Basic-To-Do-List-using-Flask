@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        .todo-container{
+
+            border: 5px solid red;
+            font-size: 2rem;
+            margin: 1rem auto;
+            width: 50%;
+            padding: 1rem;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1> My Todo List </h1>
+    <p>
+        {% for todo in todo_lists.values() %}
+            <div class = "todo-container">
+                <span> <b>Name: </b>
+                    {{ todo["task"] }}
+                </span>
+                <br>
+                <span> <b>Compeleted: </b> {{ todo["compeleted"] }} </span>
+            </div>
+        {% endfor %}
+    </p>
+</body>
+</html>
